@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\graph">
+      <UniqueIdentifier>{0bbc1f0b-cde4-416a-a61c-3ed2354ebff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\class4">
+      <UniqueIdentifier>{a940fe1e-295c-4201-8fa1-df982af7464f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ECR103">
+      <UniqueIdentifier>{239d27c8-80ed-400e-aa3e-465dc1afb428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ECR104">
+      <UniqueIdentifier>{85defe47-6986-4fe1-b71f-cfa4960b30c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\segTree">
+      <UniqueIdentifier>{6cad0151-6fba-4e23-8f19-b4a92523a066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\unionFind">
+      <UniqueIdentifier>{5a8452ab-ac2d-492e-a0cf-bdd2334b0ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\binarySearch">
+      <UniqueIdentifier>{08d9aaa2-5960-4ae7-b220-6c622fee71bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\sweeping">
+      <UniqueIdentifier>{a71e172f-11ca-4f75-9151-f83e9eca0fb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\dp">
+      <UniqueIdentifier>{f2e28655-6930-4b7e-acec-e4cc4bf445be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pr7576.cpp">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2533.cpp">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="pr9466.cpp">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="pr11812.cpp">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1005.cpp">
+      <Filter>소스 파일\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="pr15650.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1629.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1753.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1991.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1967.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr11725.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2263.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr14502.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1504.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2407.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1167.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1916.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr5639.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr12851.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr13549.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1149.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr9465.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1865.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1016.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="prA.cpp">
+      <Filter>소스 파일\ECR103</Filter>
+    </ClCompile>
+    <ClCompile Include="prB.cpp">
+      <Filter>소스 파일\ECR103</Filter>
+    </ClCompile>
+    <ClCompile Include="prC.cpp">
+      <Filter>소스 파일\ECR103</Filter>
+    </ClCompile>
+    <ClCompile Include="prD.cpp">
+      <Filter>소스 파일\ECR103</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1238.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr9663.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1043.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1786.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr14938.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr17144.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="104prA.cpp">
+      <Filter>소스 파일\ECR104</Filter>
+    </ClCompile>
+    <ClCompile Include="104prB.cpp">
+      <Filter>소스 파일\ECR104</Filter>
+    </ClCompile>
+    <ClCompile Include="104prC.cpp">
+      <Filter>소스 파일\ECR104</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1918.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr11660.cpp">
+      <Filter>소스 파일\class4</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2042.cpp">
+      <Filter>소스 파일\segTree</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1849.cpp">
+      <Filter>소스 파일\segTree</Filter>
+    </ClCompile>
+    <ClCompile Include="pr12015.cpp">
+      <Filter>소스 파일\segTree</Filter>
+    </ClCompile>
+    <ClCompile Include="pr9426.cpp">
+      <Filter>소스 파일\segTree</Filter>
+    </ClCompile>
+    <ClCompile Include="pr11658.cpp">
+      <Filter>소스 파일\segTree</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1717.cpp">
+      <Filter>소스 파일\unionFind</Filter>
+    </ClCompile>
+    <ClCompile Include="pr16562.cpp">
+      <Filter>소스 파일\unionFind</Filter>
+    </ClCompile>
+    <ClCompile Include="pr10775.cpp">
+      <Filter>소스 파일\unionFind</Filter>
+    </ClCompile>
+    <ClCompile Include="pr16724.cpp">
+      <Filter>소스 파일\unionFind</Filter>
+    </ClCompile>
+    <ClCompile Include="pr3197.cpp">
+      <Filter>소스 파일\unionFind</Filter>
+    </ClCompile>
+    <ClCompile Include="pr13306.cpp">
+      <Filter>소스 파일\unionFind</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2805.cpp">
+      <Filter>소스 파일\binarySearch</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1920.cpp">
+      <Filter>소스 파일\binarySearch</Filter>
+    </ClCompile>
+    <ClCompile Include="pr10816.cpp">
+      <Filter>소스 파일\binarySearch</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1654.cpp">
+      <Filter>소스 파일\binarySearch</Filter>
+    </ClCompile>
+    <ClCompile Include="pr1300.cpp">
+      <Filter>소스 파일\binarySearch</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2110.cpp">
+      <Filter>소스 파일\binarySearch</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2170.cpp">
+      <Filter>소스 파일\sweeping</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2836.cpp">
+      <Filter>소스 파일\sweeping</Filter>
+    </ClCompile>
+    <ClCompile Include="pr5419.cpp">
+      <Filter>소스 파일\sweeping</Filter>
+    </ClCompile>
+    <ClCompile Include="pr2482.cpp">
+      <Filter>소스 파일\dp</Filter>
+    </ClCompile>
+    <ClCompile Include="pr13976.cpp">
+      <Filter>소스 파일\dp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
