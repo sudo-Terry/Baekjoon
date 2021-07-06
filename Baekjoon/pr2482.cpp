@@ -23,7 +23,7 @@ int main() {
 		}
 	}
 	//n번째 칸을 칠하지 않는 경우 + n번째 칸을 칠하는 경우
-	ans = (dp[n - 1][k] + dp[n - 3][k - 1]) % TENBIL;
+	//ans = (dp[n - 1][k] + dp[n - 3][k - 1]) % TENBIL;
 
 	cout << ans << '\n';
 }
