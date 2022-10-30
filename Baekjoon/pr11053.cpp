@@ -1,28 +1,46 @@
 #include <iostream>
-#define MAX 1000
+#include <algorithm>
+#define MAX 1050
 
 using namespace std;
-int n = 0;
-int lastMax = 0;
-int lastMax2 = 0;
-int arr[MAX + 1] = { 0, };
-int dp[MAX + 1] = { 0, }; //memoization
+int n, ans = 0;
+int arr[MAX + 1] = {
+    0,
+};
+int dp[MAX + 1] = {
+    0,
+}; // memoization
 
-//dp[n]: n°³ÀÇ ¼ö¿­ ÀÔ·Â¿¡ ´ëÇØ °¡Àå ±ä Áõ°¡ÇÏ´Â ºÎºĞ ¼ö¿­ÀÇ ±æÀÌ // lastMax: dp[n] ºÎºĞ¼ö¿­ÀÇ ¸¶Áö¸· ¼ıÀÚ
-//¾Ë°í¸®Áò > n¹øÂ° ¼ıÀÚ°¡ lastMax°ªº¸´Ù Å¬ °æ¿ì dp[n] = dp[n-1] + 1
-//n¹øÂ° ¼ıÀÚ°¡ lastMax °ªº¸´Ù ÀÛÀº °æ¿ì¿¡´Â lastMax2 ¿Í ±× °ªÀ» ºñ±³ÇÏ¿© 
+// dp[n]ì€ arr[n]ì„ í¬í•¨í•˜ëŠ” ë¶€ë¶„ ìˆ˜ì—´ ì¤‘, ê°€ì¥ ê¸´ ê¸¸ì´ë¥¼ ê°€ì§€ëŠ” ì¦ê°€í•˜ëŠ” ë¶€ë¶„ ìˆ˜ì—´
 
+void solve()
+{
+  for (int i = 1; i <= n; i++)
+  {
+    dp[i] = 1;
+    for (int j = 1; j < i; j++)
+    {
+      if (arr[i] > arr[j])
+      {
+        dp[i] = max(dp[j] + 1, dp[i]);
+      }
+    }
+    ans = max(ans, dp[i]);
+  }
 
-int getArrlen(int n) {
-
+  cout << ans << '\n';
 }
 
-int main(void) {
+int main(void)
+{
 
-	cin >> n;
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
+  cin >> n;
+  for (int i = 1; i <= n; i++)
+  {
+    cin >> arr[i];
+  }
 
-	return 0;
+  solve();
+
+  return 0;
 }
