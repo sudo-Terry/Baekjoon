@@ -14,20 +14,18 @@ void solve() {
   int ans = 0;
   int input = n;
   int char_sum = 0; 
-  string input_string = to_string(n);
+  string input_string;
 
-  while(n){
+  while(n--){
     char_sum = 0;
+    input_string = to_string(n);
     for(int i = 0; i < input_string.length(); i++){
       char_sum += (int) input_string[i] - '0';
     }
 
     if (char_sum + n == input){
-      cout << char_sum;
       ans = n;
     }
-
-    n--;
   }
 
   cout << ans;
