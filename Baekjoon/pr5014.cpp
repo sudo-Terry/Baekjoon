@@ -41,8 +41,8 @@ class Graph{
             q.push(nextNode);
           }
         }
-        buttonClicks++;
       }
+      buttonClicks++;
     }
     cout << "use the stairs";
   }
