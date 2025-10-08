@@ -7,7 +7,7 @@ using namespace std;
 #define MAX 100010
 
 int tc, n;
-int sticker[MAX][2];
+int sticker[2][MAX];
 int dp[MAX][3];
 
 /*
@@ -37,12 +37,12 @@ int main() {
   cin >> tc;
   while (tc--){
 
-    memset(dp, -1, sizeof(dp));
+    memset(dp, 0, sizeof(dp));
 
     cin >> n;
     for(int i = 0; i < 2 ; i++){
       for(int j = 1; j <= n; j++){
-        cin >> sticker[j][i];
+        cin >> sticker[i][j];
       }
     }
     solve();
