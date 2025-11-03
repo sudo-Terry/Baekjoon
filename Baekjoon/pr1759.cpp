@@ -10,13 +10,15 @@ char alph[30];
 string partial_str = "";
 int aeiou_cnt = 0;
 int aeiou_else = 0;
+set<string> answer_str;
 
 void dfs(int index){
   // 리프노드 도달
   if(index > C || partial_str.length() > L) return;
 
   if ( aeiou_cnt >= 1 && aeiou_else >= 2 && partial_str.length() == L) {
-    cout << partial_str << '\n';
+    answer_str.insert(partial_str);
+    return;
   }
 
   // 좌측분기
@@ -65,6 +67,10 @@ int main(){
   sort(alph, alph + C); 
 
   dfs(0);
+
+  for(string str : answer_str){
+    cout << str << '\n';
+  }
 
   return 0;
 }
