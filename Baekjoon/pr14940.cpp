@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <cstring>
 using namespace std;
 #define MAX 1010
 
 int matrix[MAX][MAX];
 bool visited[MAX][MAX];
+int dist[MAX][MAX];
 int dx[4] = {0, 0, -1, 1}; // 상하좌우
 int dy[4] = {1, -1, 0, 0};
 int n, m;
@@ -43,6 +45,7 @@ int main(){
 
   int rootNode;
   cin >> n >> m;
+  memset(dist, -1, sizeof(dist));
   for(int i = 0; i < n; i++){
     for(int j = 0; j < m; j++){ 
       cin >> matrix[i][j];
