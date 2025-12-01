@@ -24,12 +24,12 @@ int main(){
     sum += visitors[i];
   }
   max_val = sum;
-  for(int i = 1; i < N - X; i++){
+  for(int i = 1; i <= N - X; i++){
     int start = i;
     int end = i + X;
 
     sum -= visitors[start - 1];
-    sum += visitors[end];
+    sum += visitors[end - 1];
 
     if(sum == max_val) counter++;
     else if (sum > max_val){
