@@ -35,12 +35,9 @@ int main() {
 
   long long ans = (N - 1) * (N - 2) / 2;
 
-  // a = b = c
+  // a = b = c -> 중복 x
   if (N % 3 == 0) {
-    // 정삼각형(a=b=c)이 존재하는 경우
-    // 정삼각형 1개는 중복되지 않고, 나머지는 3개씩 중복됨
-    // 식: 1 + (Total - 1) / 3 = (Total + 2) / 3
-      cout << (ans + 2) / 3 << "\n";
+    cout << (ans + 2) / 3 << "\n";
   } else {
     cout << ans / 3 << "\n";
   }

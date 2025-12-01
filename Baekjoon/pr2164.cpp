@@ -23,7 +23,6 @@ int main(){
     q.push(no_drop);
   }
 
-  q.pop();
   int last = q.front();
   cout << last;
 
