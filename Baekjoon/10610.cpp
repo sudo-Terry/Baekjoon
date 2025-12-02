@@ -18,16 +18,16 @@ string minus30(const string& str){
   if(input[str.size() - 2] >= '3'){ // 십의 자리
     input[str.size() - 2] = (char)((int)input[str.size() - 2] - 3);
   }else{ // 윗 자리에서 -1
-    int val = (s[str.size() - 2] - '0') + 10 - 3;
-    s[str.size() - 2] = char(val + '0');
+    int val = (input[str.size() - 2] - '0') + 10 - 3;
+    input[str.size() - 2] = char(val + '0');
 
     int i = str.size() - 3;
     while(i >= 0){
-      if(s[i] > '0'){
-        s[i] = s[i] - 1;
+      if(input[i] > '0'){
+        input[i] = input[i] - 1;
         break;
       } else {
-        s[i] = '9';
+        input[i] = '9';
         i--;
       }
     }
