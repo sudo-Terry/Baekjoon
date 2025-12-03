@@ -18,7 +18,7 @@ int main(){
   sort(vec_N.begin(), vec_N.end(), greater<int>());
   
   for(size_t i = 0; i < vec_N.size(); i++){
-    cout << vec_N;
+    cout << vec_N[i];
   }
 
   return 0;
