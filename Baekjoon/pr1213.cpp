@@ -33,6 +33,7 @@ int main(){
       }else{
         if(!flag){
           ans[(int)(ans.size() / 2)] = name[i]; // ans 중앙에 문자 넣기
+          flag = true;
           i--; // 다음 루프는 한칸만 증가
         }else{
           cout << "I'm Sorry Hansoo";
