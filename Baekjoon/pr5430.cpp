@@ -30,6 +30,7 @@ void do_func(){
   if(front_flag){
     for (int i = 0; i < dq.size(); i++) {
       cout << dq[i];
+      if(i != dq.size() - 1) cout << ",";
     }
   }else{
     for (int i = dq.size() - 1; i >= 0; i--) {
@@ -57,21 +58,21 @@ int main(){
     cin >> arr;
 
     int num = 0;
-    bool isNumber = false;
+    bool is_num = false;
 
     for (char c : arr) {
       if (isdigit(c)) {
         num = num * 10 + (c - '0');
-        isNumber = true;
+        is_num = true;
       } else {
-        if (isNumber) {
+        if (is_num) {
           dq.push_back(num);
           num = 0;
-          isNumber = false;
+          is_num = false;
         }
       }
     }
-    if (isNumber) dq.push_back(num);
+    if (is_num) dq.push_back(num);
 
     do_func();
   }
