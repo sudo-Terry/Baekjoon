@@ -52,6 +52,7 @@ int main(){
     dq.pop_front();
   }
 
+  cout << total_count << '\n';
 
   return 0;
 }
