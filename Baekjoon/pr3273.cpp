@@ -26,11 +26,11 @@ int main(){
   while(left != right){
     if(target == vec[left] + vec[right]){
       ans++;
-      left++; right--;
-    }else if(target > vec[left] + vec[right]){
-      right--;
-    }else if(target < vec[left] + vec[right]){
       left++;
+    }else if(target > vec[left] + vec[right]){
+      left++;
+    }else if(target < vec[left] + vec[right]){
+      right--;
     }
   }
 
