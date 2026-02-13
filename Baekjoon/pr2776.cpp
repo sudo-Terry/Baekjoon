@@ -16,7 +16,7 @@ int main() {
     vector<int> vec(N);
     for(int i = 0; i < N; i++) cin >> vec[i];
     cin >> M;
-    vector<int> guess;
+    vector<int> guess(M);
     for(int i = 0; i < M; i++) cin >> guess[i];
 
     sort(vec.begin(), vec.end());
@@ -26,6 +26,8 @@ int main() {
 
       auto lb = lower_bound(vec.begin(), vec.end(), target);
       auto ub = upper_bound(vec.begin(), vec.end(), target);
+      if(ub - lb > 0) cout << '1' << '\n';
+      else cout << '0' << '\n';
     }
   }
 
