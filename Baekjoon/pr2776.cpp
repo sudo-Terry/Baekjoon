@@ -24,10 +24,11 @@ int main() {
     for(int i = 0; i < M; i++){
       int target = guess[i];
 
-      auto lb = lower_bound(vec.begin(), vec.end(), target);
-      auto ub = upper_bound(vec.begin(), vec.end(), target);
-      if(ub - lb > 0) cout << '1' << '\n';
-      else cout << '0' << '\n';
+      if (binary_search(vec.begin(), vec.end(), target)) {
+        cout << '1' << '\n';
+      } else {
+        cout << '0' << '\n';
+      }
     }
   }
 
