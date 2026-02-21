@@ -14,7 +14,7 @@ void dfs() {
     return;
   }
 
-  for (int i = 0; i <= N; i++) {
+  for (int i = 1; i <= N; i++) {
     arr.push_back(i);
     dfs();
     arr.pop_back();
@@ -24,6 +24,7 @@ void dfs() {
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
+  cout.tie(nullptr);
 
   cin >> N >> M;
   dfs();
