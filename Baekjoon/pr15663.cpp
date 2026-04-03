@@ -21,6 +21,7 @@ void backtrack(int select_count){
   int prev = -1;
   for(int i = 0; i < N; i++){
     if(visited[i]) continue;
+    if(prev == vec[i]) continue;
     
     visited[i] = true;
     vec_selected.push_back(vec[i]);
