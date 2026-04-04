@@ -26,7 +26,7 @@ int main(){
   int start, end;
   for(int i = 0; i < M; i++){ // vps[j] - vps[i - 1]
     cin >> start >> end;
-    cout << vec_partial_sum[end] - vec_partial_sum[start - 1] << '\n';
+    cout << vec_partial_sum[end - 1] - vec_partial_sum[start - 2] << '\n';
   }
 
   return 0;
