@@ -1,100 +1,86 @@
 #include <iostream>
 #include <vector>
-#include <cstring>
+#include <climits>
 #include <queue>
+#include <algorithm>
 #define MAX 810
-#define INF 987654321
+#define INF 10000000
 using namespace std;
 
-//¾Ë°í¸®Áò >> dijkstra¸¦ ÅëÇØ v1°ú v2¿¡¼­ 1°ú N±îÁöÀÇ ÃÖ´Ü°Å¸®¸¦ ±¸ÇÏ°í ÀÌ¸¦ Á¶ÇÕÇÏ¿© ÃÖ´Ü°Å¸®¸¦ ±¸ÇÑ´Ù
-
-int n, e;//³ëµå¿Í ¿§ÁöÀÇ ¼ö
-int v1 = 0, v2 = 0;//¹Ýµå½Ã Áö³ª¾ß ÇÏ´Â ³ëµå
-vector<pair<int, int>> adj[MAX];//ÀÎÁ¢¸®½ºÆ®
+vector<pair<int, int>> adj[MAX];
 bool visited[MAX];
 int dist[MAX];
-int ans;
-int start_v1, start_v2, end_v1, end_v2;
+int ans = 0;
 
-void Dijkstra(int start){
-	priority_queue<pair<int, int>> pq;
+// v1 v2 ë°˜ë“œì‹œ í†µê³¼ 
+// 1 -> v1 -> v2 -> N
+// 1 -> v2 -> v1 -> N
+// ë‘˜ ì¤‘ ìµœë‹¨ê±°ë¦¬
+
+void dijkstra(int start){
+	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 	dist[start] = 0;
 	pq.push(make_pair(0, start));
 
-	while (!pq.empty())
-	{
-		int cost = -pq.top().first;
+	while (!pq.empty()){
+		int cost = pq.top().first;
 		int curr = pq.top().second;
 		pq.pop();
 
-		for (int i = 0; i < adj[curr].size(); i++)
-		{
+		if(visited[curr]) continue;
+		visited[curr] = true;
+
+		for (int i = 0; i < adj[curr].size(); i++){
 			int next = adj[curr][i].first;
 			int nextCost = adj[curr][i].second;
 
-			if (dist[next] > cost + nextCost)
-			{
+			if (dist[next] > cost + nextCost){
 				dist[next] = cost + nextCost;
-				pq.push(make_pair(-dist[next], next));
+				pq.push({dist[next], next});
 			}
 		}
 	}
 }
 
-void solve() {
-	bool flag1 = true, flag2 = true;
-
-	for (int i = 1; i <= n; i++) 
-		dist[i] = INF;
-	Dijkstra(1);
-
-	int route1 = dist[v1];
-	int route2 = dist[v2];
-	if (route1 == INF)
-		flag1 = false;
-	if (route2 == INF) 
-		flag2 = false;
-
-	for (int i = 1; i <= n; i++) 
-		dist[i] = INF;
-	Dijkstra(v1);
-	if (flag1 == true) 
-		route1 = route1 + dist[v2];
-	if (flag2 == true) 
-		route2 = route2 + dist[v2];
-
-	for (int i = 1; i <= n; i++) 
-		dist[i] = INF;
-	Dijkstra(v2);
-	if (flag1 == true) 
-		route1 = route1 + dist[n];
-
-	for (int i = 1; i <= n; i++) 
-		dist[i] = INF;
-	Dijkstra(v1);
-	if (flag2 == true) 
-		route2 = route2 + dist[n];
-
-	if (flag1 == false && flag2 == false) 
-		ans = -1;
-	else{
-		ans = min(route1, route2);
-	}
-
-	if (ans == INF) 
-		ans = -1;
-}
-
 int main() {
-	int node1, node2, len;
+	ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+	int n, e;
+	int v1, v2;
 	cin >> n >> e;
+	int node1, node2, len;
 	for (int i = 0; i < e; i++) {
 		cin >> node1 >> node2 >> len;
-		adj[node1].push_back(make_pair(node2, len));
-		adj[node2].push_back(make_pair(node1, len));
+		adj[node1].push_back({node2, len});
+		adj[node2].push_back({node1, len});
 	}
 	cin >> v1 >> v2;
-	solve();
-	cout << ans;
+
+	for(int i = 1; i < MAX; i++) dist[i] = INF;
+	dijkstra(1);
+	int st_to_v1 = dist[v1];
+	int st_to_v2 = dist[v2];
+
+	for(int i = 1; i < MAX; i++) dist[i] = INF;
+	for(int i = 1; i < MAX; i++) visited[i] = false;
+	dijkstra(v1);
+	int v1_to_v2 = dist[v2];
+	int v1_to_n = dist[n];
+	
+	for(int i = 1; i < MAX; i++) dist[i] = INF;
+	for(int i = 1; i < MAX; i++) visited[i] = false;
+	dijkstra(v2);
+	int v2_to_v1 = dist[v1];
+	int v2_to_n = dist[n];
+
+	ans = min(
+		st_to_v1 + v1_to_v2 + v2_to_n,
+		st_to_v2 + v2_to_v1 + v1_to_n
+	);
+	
+	if(ans >= INF) cout << "-1";
+	else cout << ans;
+
 	return 0;
 }
